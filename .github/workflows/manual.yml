@@ -33,6 +33,6 @@ jobs:
 
 
 
-    - name: Run test_example.py
+    - name: Run MobileTestCases.py
       run: |
-        pytest -v -s test_example.py # Run the Python script
+        pytest -v -s MobileTestCases.py # Run the Python script
