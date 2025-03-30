@@ -1,0 +1,38 @@
+name: Mobile Recorder Automation Cases
+
+on:
+  workflow_dispatch:  # This allows you to trigger the workflow manually
+
+jobs:
+  run-python-script:
+    runs-on: macos-latest  # Specify macOS runner instead of Ubuntu
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2  # This checks out your repository to the GitHub runner
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.13'  # Specify the Python version you want to use
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest  # Explicitly install pytest
+        pip install browser_use
+        pip install langchain_google_genai
+        pip install anyio
+        pip install pytest-asyncio
+        pip install pytest-tornasync
+        pip install pytest-trio
+        pip install pytest-twisted
+        pip install twisted
+        playwright install
+
+
+
+
+    - name: Run test_example.py
+      run: |
+        pytest -v -s test_example.py # Run the Python script
