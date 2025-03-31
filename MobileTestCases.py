@@ -23,7 +23,7 @@ tasks = [
         '11. Click on record button again'
         '12. Wait for 20 seconds'
         '13. Click on add new step'
-        '14. Verify DELETE button should be present in the mobile editor in right side panel'
+        '14. Verify STOP button should be present in the mobile editor in right side panel'
     ),
     (
         '1. Open the URL "https://google.com" in browser'
